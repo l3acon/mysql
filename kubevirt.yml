@@ -5,7 +5,7 @@ connections:
   - namespaces:
       - default
 compose:
-  ansible_user: "'cloud-user' if 'rhel' in vmi_annotations['vm.kubevirt.io/os'] | default(omit)"
+#  ansible_user: "'cloud-user' if 'rhel' in vmi_annotations['vm.kubevirt.io/os'] | default(omit)"
   vmi_annotations: "vmi_annotations | ansible.utils.replace_keys(target=[
                 {'before':'vm.kubevirt.io/os', 'after':'os'},
                 {'before':'vm.kubevirt.io/flavor', 'after':'flavor'},
