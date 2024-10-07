@@ -1,5 +1,4 @@
 ---
----
 plugin: redhat.openshift_virtualization.kubevirt
 strict: true
 connections:
