@@ -1,6 +1,6 @@
 ---
 plugin: redhat.openshift_virtualization.kubevirt
-strict: true
+strict: false
 connections:
   - namespaces:
       - default
