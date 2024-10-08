@@ -1,5 +1,5 @@
 ---
-- name: Install MSSQL
+- name: mk MSSQL
   hosts: sqlservers
   tasks:
   - name: Install MSSQL using DSC

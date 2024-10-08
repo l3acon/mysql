@@ -60,37 +60,76 @@
     include_sub_features: "{{ feature.include_sub_features | default(omit) }}"
     state: present
 
+- name: de bugs
+  ansible.builtin.debug:
+    msg: "Creating user: {{ mssql_sqlsvc_account | regex_search('[^\\\\]*$') }}"
+
+#- name: Active Directory | Ensure SQL Service account is present
+#  delegate_to: "{{ mssql_domain_controller }}"
+#  tags: service_account
+#  community.windows.win_domain_user:
+#    name: "{{ mssql_sqlsvc_account | regex_search('[^\\\\]*$') }}"
+#    firstname: "{{ mssql_instance_name }}"
+#    surname: SQLSvc
+#    password: "{{ mssql_sqlsvc_account_pass }}"
+#    password_never_expires: yes
+#    user_cannot_change_password: yes
+#    description: "SQL Service account for {{ inventory_hostname }}\\{{ mssql_instance_name }}"
+#    state: present
+#    path: "{{ mssql_base_ldap_path }}"
+#    groups:
+#      - Domain Users
+#
+#- name: Active Directory | Ensure SQL Agent Service account is present
+#  delegate_to: "{{ mssql_domain_controller }}"
+#  tags: service_account
+#  community.windows.win_domain_user:
+#    name: "{{ mssql_agentsvc_account | regex_search('[^\\\\]*$') }}"
+#    firstname: "{{ mssql_instance_name }}"
+#    surname: AgentSvc
+#    password: "{{ mssql_agentsvc_account_pass }}"
+#    password_never_expires: yes
+#    user_cannot_change_password: yes
+#    description: "SQL Agent service account for {{ inventory_hostname }}\\{{ mssql_instance_name }}"
+#    state: present
+#    path: "{{ mssql_base_ldap_path }}"
+#    groups:
+#      - Domain Users
+
+
 - name: Active Directory | Ensure SQL Service account is present
   delegate_to: "{{ mssql_domain_controller }}"
   tags: service_account
-  community.windows.win_domain_user:
-    name: "{{ mssql_sqlsvc_account | regex_search('[^\\\\]*$') }}"
+  microsoft.ad.user:
+    identity: "{{ mssql_sqlsvc_account | regex_search('[^\\\\]*$') }}"
     firstname: "{{ mssql_instance_name }}"
     surname: SQLSvc
     password: "{{ mssql_sqlsvc_account_pass }}"
+    path: "{{ mssql_base_ldap_path }}"
+    description: "SQL Service account for {{ inventory_hostname }}\\{{ mssql_instance_name }}"
     password_never_expires: yes
     user_cannot_change_password: yes
-    description: "SQL Service account for {{ inventory_hostname }}\\{{ mssql_instance_name }}"
     state: present
-    path: "{{ mssql_base_ldap_path }}"
     groups:
-      - Domain Users
+      set:
+        - Domain Users
 
 - name: Active Directory | Ensure SQL Agent Service account is present
   delegate_to: "{{ mssql_domain_controller }}"
   tags: service_account
-  community.windows.win_domain_user:
-    name: "{{ mssql_agentsvc_account | regex_search('[^\\\\]*$') }}"
+  microsoft.ad.user:
+    identity: "{{ mssql_agentsvc_account | regex_search('[^\\\\]*$') }}"
+    password: "{{ mssql_agentsvc_account_pass }}"
     firstname: "{{ mssql_instance_name }}"
     surname: AgentSvc
-    password: "{{ mssql_agentsvc_account_pass }}"
+    description: "SQL Agent service account for {{ inventory_hostname }}\\{{ mssql_instance_name }}"
     password_never_expires: yes
     user_cannot_change_password: yes
-    description: "SQL Agent service account for {{ inventory_hostname }}\\{{ mssql_instance_name }}"
-    state: present
     path: "{{ mssql_base_ldap_path }}"
+    state: present
     groups:
-      - Domain Users
+      set:
+        - Domain Users
 
 - name: Ensure installation path exists
   tags: fetch_media
