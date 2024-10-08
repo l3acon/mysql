@@ -1,0 +1,243 @@
+{
+ "files": [
+  {
+   "name": ".",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": ".DS_Store",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9c8702fc6fd8fdc494baa02c09c5ab8b0c0b6dd6bac27709e85138d7243917e5",
+   "format": 1
+  },
+  {
+   "name": "LICENSE",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "8b1ba204bb69a0ade2bfcf65ef294a920f6bb361b317dba43c7ef29d96332b9b",
+   "format": 1
+  },
+  {
+   "name": "plugins",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/__init__.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/smb_info.ps1",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "67842882d043891108fed2291b396bafb85edb86ffb8b6a49bc1a284ed86414e",
+   "format": 1
+  },
+  {
+   "name": "plugins/modules/smb_info.py",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "48306231bd65ce2a4b36576bcd59c6582ae58ef4ec2030d4342379987e299ad1",
+   "format": 1
+  },
+  {
+   "name": "meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "meta/runtime.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "2a49b13b8b138e248af84c96cd4367ad5afc175479b4781b23e754816631305e",
+   "format": 1
+  },
+  {
+   "name": "roles",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/patch",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/patch/vars",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/patch/vars/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "cedeeb49014af254633c096c411bf5e0b1981b2f0abb8a207a0e4b255138f85c",
+   "format": 1
+  },
+  {
+   "name": "roles/patch/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/patch/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9a169cce33b0a0371eb390a823111c1a2647249d1cfb4c16461ac267d336c9ae",
+   "format": 1
+  },
+  {
+   "name": "roles/patch/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "47d17553c8e6686263f78fe9efc6019e151aa3045ffb90e6fdc4f04d57e55aec",
+   "format": 1
+  },
+  {
+   "name": "roles/patch/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/patch/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "edce3cf4f6a8c297da0e1d604afd94706b4770456c1b2251c2c11d05a869b403",
+   "format": 1
+  },
+  {
+   "name": "roles/patch/templates",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/patch/templates/failed_report.txt.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "4f3c9919acf9266cdf664205ae4755e41d79f7258c042c7ea29300156dfaa051",
+   "format": 1
+  },
+  {
+   "name": "roles/patch/templates/search_report.html.j2",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "be3c1a1d9814add6c2757c19687b04720e6166ac0fe93360db8c9c0396f84f87",
+   "format": 1
+  },
+  {
+   "name": "roles/mssql",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/mssql/tasks",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/mssql/tasks/test_connection.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "109bc79cb77a77ca5f9a2015a1cc26df7357737da114ac7e634edc5407cbb232",
+   "format": 1
+  },
+  {
+   "name": "roles/mssql/tasks/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "ccb622b34da78b6adcf9c5a7297c16f7ee2dc298fa80acffe62f47265e6bb590",
+   "format": 1
+  },
+  {
+   "name": "roles/mssql/meta",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/mssql/meta/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "5ab4e793f557ba4fc18be45273a11cadd7b5282f58c7509038145cc3a6a39841",
+   "format": 1
+  },
+  {
+   "name": "roles/mssql/README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "9e57fcd273006c66ce291d049bdc15a1a5c1e38466cf1f97f16bc324005afc88",
+   "format": 1
+  },
+  {
+   "name": "roles/mssql/defaults",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/mssql/defaults/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "1b56446dd99629fa0f59ad888331617de8271385a3f54337ee5cabba39a75013",
+   "format": 1
+  },
+  {
+   "name": "roles/mssql/handlers",
+   "ftype": "dir",
+   "chksum_type": null,
+   "chksum_sha256": null,
+   "format": 1
+  },
+  {
+   "name": "roles/mssql/handlers/main.yml",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "6c0179ab0239eed154c1a4b79e35286a6b0f674fa40c2ff7be053e2b1208487a",
+   "format": 1
+  },
+  {
+   "name": "README.md",
+   "ftype": "file",
+   "chksum_type": "sha256",
+   "chksum_sha256": "48969c2692065b9eab17869dd28f88aab67a466519d5d6e789e971a80cac5f64",
+   "format": 1
+  }
+ ],
+ "format": 1
+}

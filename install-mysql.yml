@@ -1,0 +1,11 @@
+---
+- name: Install MSSQL
+  hosts: sqlservers
+  tasks:
+  - name: Install MSSQL using DSC
+    ansible.builtin.include_role:
+      name: zjleblanc.windows.mssql
+    vars:
+      netbios: ANSIBLE
+      mssql_base_ldap_path: "OU=Users,DC=ansible,DN=local"
+      mssql_domain_controller: "dc01.ansible.local"

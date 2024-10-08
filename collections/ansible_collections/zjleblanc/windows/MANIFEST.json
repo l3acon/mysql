@@ -1,0 +1,33 @@
+{
+ "collection_info": {
+  "namespace": "zjleblanc",
+  "name": "windows",
+  "version": "1.0.1",
+  "authors": [
+   "Zach LeBlanc <zjleblanc3@gmail.com>"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "windows",
+   "mssql",
+   "smb",
+   "patching"
+  ],
+  "description": "Windows automation content",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {},
+  "repository": "https://github.com/zjleblanc/zjleblanc.windows",
+  "documentation": "https://github.com/zjleblanc/zjleblanc.tmdb/windows/master/README.md",
+  "homepage": "https://github.com/zjleblanc/zjleblanc.windows",
+  "issues": "https://github.com/zjleblanc/zjleblanc.windows/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "80854bdcb0c39fa45de24c0a9e740bb21cb305917ac22e182a4ab6b11ff039a6",
+  "format": 1
+ },
+ "format": 1
+}
