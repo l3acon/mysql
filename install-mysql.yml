@@ -7,5 +7,5 @@
       name: zjleblanc.windows.mssql
     vars:
       netbios: ANSIBLE
-      mssql_base_ldap_path: "OU=Users,DC=ansible,DN=local"
+      mssql_base_ldap_path: "ou=Users,dc=ansible,dn=local"
       mssql_domain_controller: "dc01.ansible.local"
