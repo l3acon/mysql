@@ -1,0 +1,7 @@
+---
+- name: create credential
+
+      ### From custom credential ###
+      # mssql_sqlsvc_account_pass:
+      # mssql_agentsvc_account_pass
+      # mssql_assvc_account_pass:

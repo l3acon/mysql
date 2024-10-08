@@ -102,6 +102,7 @@
   tags: service_account
   microsoft.ad.user:
     identity: "{{ mssql_sqlsvc_account | regex_search('[^\\\\]*$') }}"
+    name: "{{ mssql_sqlsvc_account | regex_search('[^\\\\]*$') }}"
     firstname: "{{ mssql_instance_name }}"
     surname: SQLSvc
     password: "{{ mssql_sqlsvc_account_pass }}"
@@ -119,6 +120,7 @@
   tags: service_account
   microsoft.ad.user:
     identity: "{{ mssql_agentsvc_account | regex_search('[^\\\\]*$') }}"
+    name: "{{ mssql_agentsvc_account | regex_search('[^\\\\]*$') }}"
     password: "{{ mssql_agentsvc_account_pass }}"
     firstname: "{{ mssql_instance_name }}"
     surname: AgentSvc
