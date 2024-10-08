@@ -106,7 +106,6 @@
     firstname: "{{ mssql_instance_name }}"
     surname: SQLSvc
     password: "{{ mssql_sqlsvc_account_pass }}"
-    path: "{{ mssql_base_ldap_path }}"
     description: "SQL Service account for {{ inventory_hostname }}\\{{ mssql_instance_name }}"
     password_never_expires: yes
     user_cannot_change_password: yes
@@ -127,7 +126,6 @@
     description: "SQL Agent service account for {{ inventory_hostname }}\\{{ mssql_instance_name }}"
     password_never_expires: yes
     user_cannot_change_password: yes
-    path: "{{ mssql_base_ldap_path }}"
     state: present
     groups:
       set:
