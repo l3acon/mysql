@@ -175,7 +175,7 @@
   register: r_install_mssql
   retries: 2
   until: r_install_mssql is not failed
-  delay: 30
+  delay: 45
   ansible.windows.win_dsc:
     resource_name: SQLSetup
     Action: Install

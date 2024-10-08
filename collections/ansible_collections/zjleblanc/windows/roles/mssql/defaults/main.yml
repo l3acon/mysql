@@ -47,7 +47,7 @@ mssql_suppress_reboot: False
 
 mssql_base_ldap_path: "ou=Users,dc=contoso,dc=com"
 mssql_domain_controller: dc01
-mssql_netbios: CONTOSO
+mssql_netbios: ANSIBLE
 
 # SQL Service Accounts
 # regex statements used in some steps expect the format of {{ mssql_netbios }}\
