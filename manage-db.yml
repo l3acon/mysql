@@ -16,7 +16,7 @@
     ansible.windows.win_dsc:
       resource_name: SqlDatabase
       InstanceName: "{{ sql_instance_name }}"
-      ServerName: "{{ inventory_hostname_short }}"
+      ServerName: "winthrop.ansible.local"
       Name: "{{ sql_server_db }}"
       Ensure: "{{ sql_server_db_state }}"
 
