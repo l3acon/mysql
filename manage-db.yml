@@ -1,11 +1,11 @@
 ---
 - name: Manage databases
-  hosts: dc01.ansible.local
+  hosts: sqlservers
   gather_facts: false
   vars:
     sql_server_db_state: 'Present'
     sql_server_db: 'my-new-db'
-    sql_instance_name: "winthrop"
+    sql_instance_name: MSSQLSERVER
     sql_server_name: "winthrop"
   tasks:
   - name: Set up PowerShell for fetching modules
