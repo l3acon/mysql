@@ -1,6 +1,6 @@
 ---
 - name: Manage databases
-  hosts: dc01.
+  hosts: sqlservers
   vars:
     sql_server_db_state: 'Present'
     sql_server_db: 'my-new-db'
