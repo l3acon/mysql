@@ -1,10 +1,9 @@
 ---
-- name: Manage databasese
-  hosts: sqlservers 
+- name: Manage databases
+  hosts: dc01.
   vars:
     sql_server_db_state: 'Present'
     sql_server_db: 'my-new-db'
-    sql_instance_name: 'ANSIBLE'
   tasks:
   - name: Install SqlServer PsModule
     community.windows.win_psmodule:
@@ -12,10 +11,9 @@
       state: present
       allow_clobber: true
 
-  - name: "Set databses to {{ database_state }}"
+  - name: Manage databases
     ansible.windows.win_dsc:
       resource_name: SqlDatabase
-      InstanceName: "{{ sql_instance_name }}"
       ServerName: "winthrop.ansible.local"
       Name: "{{ sql_server_db }}"
       Ensure: "{{ sql_server_db_state }}"
