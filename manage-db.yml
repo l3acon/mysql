@@ -8,11 +8,11 @@
     sql_instance_name: "winthrop"
     sql_server_name: "winthrop"
   tasks:
-#  - name: Install SqlServer PsModule
-#    community.windows.win_psmodule:
-#      name: SqlServer
-#      state: present
-#      allow_clobber: true
+  - name: Install SqlServer PsModule
+    community.windows.win_psmodule:
+      name: SqlServer
+      state: present
+      allow_clobber: true
 
   - name: Manage databases
     ansible.windows.win_dsc:
