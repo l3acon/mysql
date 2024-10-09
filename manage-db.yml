@@ -1,11 +1,11 @@
 ---
 - name: Manage databases
-  hosts: sqlservers
+  hosts: dc01.ansible.local
   gather_facts: false
   vars:
     sql_server_db_state: 'Present'
     sql_server_db: 'my-new-db'
-    sql_instance_name: ""
+    sql_instance_name: "winthrop"
     sql_server_name: "winthrop"
   tasks:
 #  - name: Install SqlServer PsModule
