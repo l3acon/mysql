@@ -8,6 +8,13 @@
     sql_instance_name: "winthrop"
     sql_server_name: "winthrop"
   tasks:
+  - name: Set up PowerShell for fetching modules
+    tags: prereqs
+    ansible.builtin.win_shell: |
+      Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
+      Install-Module PowerShellGet -AllowClobber -Force
+      Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+
   - name: Install SqlServer PsModule
     community.windows.win_psmodule:
       name: SqlServer
