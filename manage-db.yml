@@ -1,6 +1,6 @@
 ---
 - name: Manage databasese
-  hosts: "{{ sqlservers }}"
+  hosts: sqlservers 
   vars:
     sql_server_db_state: 'Present'
     sql_server_db: 'my-new-db'
