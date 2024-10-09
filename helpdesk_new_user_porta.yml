@@ -11,10 +11,10 @@
 
     - name: Create new user
       community.windows.win_domain_user:
-        name: "{{ firstname }} {{ surname }}"
-        firstname: "{{ firstname }}"
-        surname: "{{ surname }}"
-        sam_account_name: "{{ firstname[0] }}{{ surname }}"
+        name: "{{ username }}"
+        firstname: "{{ username }}"
+        surname: "{{ username }}"
+        sam_account_name: "sql{{ username }}"
         password: "{{ temp_password }}"
         state: present
         groups:
