@@ -4,7 +4,7 @@
   vars:
     sql_server_db_state: 'Present'
     sql_server_db: 'my-new-db'
-    sql_instance_name: 'DSC'
+    sql_instance_name: 'ANSIBLE'
   tasks:
   - name: Install SqlServer PsModule
     community.windows.win_psmodule:
