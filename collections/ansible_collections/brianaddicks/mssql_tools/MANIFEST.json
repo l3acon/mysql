@@ -1,0 +1,33 @@
+{
+ "collection_info": {
+  "namespace": "brianaddicks",
+  "name": "mssql_tools",
+  "version": "1.0.0",
+  "authors": [
+   "Brian Addicks @brianaddicks"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "mssql",
+   "collection"
+  ],
+  "description": "Several roles for MSSQL configuration and maintenance",
+  "license": [
+   "GPL-3.0-or-later"
+  ],
+  "license_file": null,
+  "dependencies": {},
+  "repository": "https://github.com/brianaddicks/mssql_tools/",
+  "documentation": null,
+  "homepage": null,
+  "issues": "https://github.com/brianaddicks/mssql_tools//issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "e6117140277b89e72b1acf8d9e8aeafd44566d74d364b1b0589a86c550e52e1a",
+  "format": 1
+ },
+ "format": 1
+}

@@ -1,0 +1,12 @@
+---
+argument_specs:
+  main:
+    short_description: Ansible role to install Microsoft SSMS.
+    options:
+      ssms_version:
+        description: Desired version of SSMS
+        type: str
+        required: false
+        default: latest
+        choices:
+          - latest

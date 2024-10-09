@@ -1,0 +1,8 @@
+- name: Install SQL Server on Window host
+  hosts: dc01.ansible.local
+  gather_facts: false
+
+  tasks:
+    - name: Install SSMS
+      ansible.builtin.include_role:
+        name: brianaddicks.mssql_tools.ssms
