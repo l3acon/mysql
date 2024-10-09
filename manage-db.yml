@@ -4,7 +4,8 @@
   vars:
     sql_server_db_state: 'Present'
     sql_server_db: 'my-new-db'
-    sql_instance_name: ""
+    sql_instance_name: "winthrop"
+    sql_server_name: "winthrop.ansible.local"
   tasks:
   - name: Install SqlServer PsModule
     community.windows.win_psmodule:
@@ -15,9 +16,9 @@
   - name: Manage databases
     ansible.windows.win_dsc:
       resource_name: SqlDatabase
-      ServerName: "winthrop.ansible.local"
+      ServerName: "{{ sql_server_name }}"
       Name: "{{ sql_server_db }}"
       Ensure: "{{ sql_server_db_state }}"
-      InstanceName: sql_instance_name
+      InstanceName: "{{ sql_instance_name }}"
 
 
