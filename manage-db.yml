@@ -1,17 +1,18 @@
 ---
 - name: Manage databases
   hosts: sqlservers
+  gather_facts: false
   vars:
     sql_server_db_state: 'Present'
     sql_server_db: 'my-new-db'
     sql_instance_name: "winthrop"
-    sql_server_name: "winthrop.ansible.local"
+    sql_server_name: "winthrop"
   tasks:
-  - name: Install SqlServer PsModule
-    community.windows.win_psmodule:
-      name: SqlServer
-      state: present
-      allow_clobber: true
+#  - name: Install SqlServer PsModule
+#    community.windows.win_psmodule:
+#      name: SqlServer
+#      state: present
+#      allow_clobber: true
 
   - name: Manage databases
     ansible.windows.win_dsc:
