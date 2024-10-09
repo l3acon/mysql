@@ -15,9 +15,9 @@
       Install-Module PowerShellGet -AllowClobber -Force
       Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
-  - name: Install SqlServer PsModule
+  - name: Install SqlDatabase PsModule
     community.windows.win_psmodule:
-      name: SqlServer
+      name: SqlDatabase
       state: present
       allow_clobber: true
 
