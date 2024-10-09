@@ -5,7 +5,7 @@
   vars:
     sql_server_db_state: 'Present'
     sql_server_db: 'my-new-db'
-    sql_instance_name: "winthrop"
+    sql_instance_name: ""
     sql_server_name: "winthrop"
   tasks:
 #  - name: Install SqlServer PsModule
