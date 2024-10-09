@@ -18,7 +18,6 @@
       resource_name: SqlDatabase
       ServerName: "{{ sql_server_name }}"
       Name: "{{ sql_server_db }}"
-      Force: true
       Ensure: "{{ sql_server_db_state }}"
       InstanceName: "{{ sql_instance_name }}"
 
