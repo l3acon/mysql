@@ -2,11 +2,6 @@
 - name: Manage databases
   hosts: sqlservers
   gather_facts: false
-  vars:
-    sql_server_db_state: 'Present'
-    sql_server_db: 'my-new-db'
-    sql_instance_name: MSSQLSERVER
-    sql_server_name: "winthrop"
   tasks:
   - name: Set up PowerShell for fetching modules
     tags: prereqs
@@ -24,9 +19,9 @@
   - name: Manage databases
     ansible.windows.win_dsc:
       resource_name: SqlDatabase
-      ServerName: "{{ sql_server_name }}"
-      Name: "{{ sql_server_db }}"
-      Ensure: "{{ sql_server_db_state }}"
-      InstanceName: "{{ sql_instance_name }}"
+      ServerName: "{{ sql_server_name | default('winthrop') }}"
+      Name: "{{ sql_server_db | default('my-new-db') }}"
+      Ensure: "{{ sql_server_db_state | default('Present') }}"
+      InstanceName: "{{ sql_instance_name | default('MSSQLSERVER') }}"
 
 
